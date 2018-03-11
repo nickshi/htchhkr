@@ -16,6 +16,14 @@ extension UIView {
         }
     }
     
+    func fadeto(alphaValue: CGFloat, withDuratiion duration: TimeInterval, completion: @escaping (Bool) ->()) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = alphaValue
+        }) { (finished) in
+            completion(finished)
+        }
+    }
+    
     func bindToKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }

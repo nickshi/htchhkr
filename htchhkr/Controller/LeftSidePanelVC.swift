@@ -20,11 +20,11 @@ class LeftSidePanelVC: UIViewController {
     
     let appDelegate = AppDelegate.getAppDelegate()
     
-    let currentUserId = Auth.auth().currentUser?.uid
+    var currentUserId = Auth.auth().currentUser?.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        currentUserId = Auth.auth().currentUser?.uid
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {

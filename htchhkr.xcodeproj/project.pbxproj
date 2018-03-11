@@ -27,6 +27,9 @@
 		01FE1EE6204E63DB00FBDB08 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1EE5204E63DB00FBDB08 /* DataService.swift */; };
 		01FE1EE8204F54FA00FBDB08 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1EE7204F54FA00FBDB08 /* UpdateService.swift */; };
 		01FE1EEA204F5A3600FBDB08 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1EE9204F5A3600FBDB08 /* UIImageViewExt.swift */; };
+		01FE1EEC2050B17A00FBDB08 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1EEB2050B17A00FBDB08 /* DriverAnnotation.swift */; };
+		01FE1EFC205386E700FBDB08 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1EFB205386E700FBDB08 /* PassengerAnnotation.swift */; };
+		01FE1EFE2053975C00FBDB08 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1EFD2053975C00FBDB08 /* UIViewControllerExt.swift */; };
 		8EF9E53C4673977C3885DBBA /* Pods_htchhkr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4BF1603CAC31E566071287 /* Pods_htchhkr.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		01FE1EE5204E63DB00FBDB08 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		01FE1EE7204F54FA00FBDB08 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		01FE1EE9204F5A3600FBDB08 /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
+		01FE1EEB2050B17A00FBDB08 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		01FE1EFB205386E700FBDB08 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
+		01FE1EFD2053975C00FBDB08 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		0D4BF1603CAC31E566071287 /* Pods_htchhkr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htchhkr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45C62A903DD90A3A26118CE /* Pods-htchhkr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htchhkr.release.xcconfig"; path = "Pods/Target Support Files/Pods-htchhkr/Pods-htchhkr.release.xcconfig"; sourceTree = "<group>"; };
 		FAC34A93DFCCD61E789B41A4 /* Pods-htchhkr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htchhkr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htchhkr/Pods-htchhkr.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 				01BA383E204A06FA009BE57F /* CircleView.swift */,
 				01BA3840204A0898009BE57F /* RoundedShadowButton.swift */,
 				01FE1EE0204E550700FBDB08 /* RoundedTextField.swift */,
+				01FE1EEB2050B17A00FBDB08 /* DriverAnnotation.swift */,
+				01FE1EFB205386E700FBDB08 /* PassengerAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			children = (
 				01FE1EDC204E4BA700FBDB08 /* UIViewExt.swift */,
 				01FE1EE9204F5A3600FBDB08 /* UIImageViewExt.swift */,
+				01FE1EFD2053975C00FBDB08 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,7 +330,9 @@
 			files = (
 				01020494204A17D300B49F6E /* CenterVCDelegate.swift in Sources */,
 				01FE1EE6204E63DB00FBDB08 /* DataService.swift in Sources */,
+				01FE1EFC205386E700FBDB08 /* PassengerAnnotation.swift in Sources */,
 				01BA3841204A0898009BE57F /* RoundedShadowButton.swift in Sources */,
+				01FE1EEC2050B17A00FBDB08 /* DriverAnnotation.swift in Sources */,
 				01FE1EDF204E540F00FBDB08 /* LoginVC.swift in Sources */,
 				01FE1EE1204E550700FBDB08 /* RoundedTextField.swift in Sources */,
 				01BA383F204A06FA009BE57F /* CircleView.swift in Sources */,
@@ -331,6 +342,7 @@
 				01FE1EE8204F54FA00FBDB08 /* UpdateService.swift in Sources */,
 				011AAD322049ED3C0034A31B /* HomeVC.swift in Sources */,
 				01BA383B204A052D009BE57F /* RoundImageView.swift in Sources */,
+				01FE1EFE2053975C00FBDB08 /* UIViewControllerExt.swift in Sources */,
 				01FE1EEA204F5A3600FBDB08 /* UIImageViewExt.swift in Sources */,
 				01BA383D204A05EC009BE57F /* RoundedShadowView.swift in Sources */,
 				011AAD302049ED3C0034A31B /* AppDelegate.swift in Sources */,

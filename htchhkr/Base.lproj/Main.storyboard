@@ -64,7 +64,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DZ-Kd-yP0">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DZ-Kd-yP0">
                                                         <rect key="frame" x="25" y="0.0" width="290" height="25"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
@@ -99,11 +99,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mwc-T6-GBT">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mwc-T6-GBT">
                                                         <rect key="frame" x="25" y="0.0" width="290" height="25"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="OXh-X1-OGl"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -222,6 +225,9 @@
                     </view>
                     <connections>
                         <outlet property="actionBtn" destination="Xfm-73-tQa" id="yGK-Cw-nD5"/>
+                        <outlet property="centerMapBtn" destination="ZUZ-jy-B1i" id="5we-rf-9kE"/>
+                        <outlet property="destinationCircle" destination="kF1-eo-Xqy" id="bMU-SO-44y"/>
+                        <outlet property="destinationTextField" destination="Mwc-T6-GBT" id="FsQ-nS-4Se"/>
                         <outlet property="mapView" destination="T29-gS-ysG" id="kwP-JO-mnX"/>
                     </connections>
                 </viewController>
@@ -405,10 +411,10 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SCj-Pk-nMm">
-                                            <rect key="frame" x="12" y="190.5" width="350.5" height="286"/>
+                                            <rect key="frame" x="12" y="153.5" width="350.5" height="360"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y6z-dN-kdC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="350.5" height="66"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="350.5" height="140"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ed-Ob-6Td">
                                                             <rect key="frame" x="57" y="0.0" width="236.5" height="66"/>
@@ -428,7 +434,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up or login to start requesting rides with HTCHHKR: the easiest way to get a lift anywhere!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81B-38-Mf1">
-                                                            <rect key="frame" x="161.5" y="66" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="66" width="350.5" height="74"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -439,7 +445,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IBk-FC-Io0">
-                                                    <rect key="frame" x="0.0" y="86" width="350.5" height="41"/>
+                                                    <rect key="frame" x="0.0" y="160" width="350.5" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="oXh-pX-jvr"/>
                                                     </constraints>
@@ -450,7 +456,7 @@
                                                     <color key="tintColor" red="1" green="0.2492350861" blue="0.059847334570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2q4-QN-yV2" customClass="RoundedTextField" customModule="htchhkr" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="146" width="350.5" height="60"/>
+                                                    <rect key="frame" x="0.0" y="220" width="350.5" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="yp5-tb-KCa"/>
                                                     </constraints>
@@ -459,7 +465,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCU-Ew-Fqv" customClass="RoundedTextField" customModule="htchhkr" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="226" width="350.5" height="60"/>
+                                                    <rect key="frame" x="0.0" y="300" width="350.5" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="3PP-3O-FxF"/>
                                                     </constraints>
@@ -494,13 +500,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="89f-SK-Af9" secondAttribute="bottom" constant="5" id="tpb-Ak-ZQz"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cay-L8-X7T" customClass="UIImageViewExt" customModule="htchhkr" customModuleProvider="target">
-                                            <rect key="frame" x="91" y="48" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="imageURL" value="https://cdn.pixabay.com/photo/2017/08/22/16/23/cat-2669554_960_720.png"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="SCj-Pk-nMm" firstAttribute="centerX" secondItem="EUo-2S-SxB" secondAttribute="centerX" id="3MJ-1U-VDK"/>
