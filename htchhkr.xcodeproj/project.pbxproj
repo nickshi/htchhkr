@@ -15,6 +15,9 @@
 		011AAD352049ED3C0034A31B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011AAD332049ED3C0034A31B /* Main.storyboard */; };
 		011AAD372049ED3C0034A31B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011AAD362049ED3C0034A31B /* Assets.xcassets */; };
 		011AAD3A2049ED3C0034A31B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011AAD382049ED3C0034A31B /* LaunchScreen.storyboard */; };
+		01893F9B205B598E004411F4 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01893F9A205B598E004411F4 /* Alertable.swift */; };
+		01893F9F205B6847004411F4 /* PickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01893F9E205B6847004411F4 /* PickupVC.swift */; };
+		01893FA1205B692F004411F4 /* RoundMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01893FA0205B692F004411F4 /* RoundMapView.swift */; };
 		01BA38392049FF77009BE57F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA38382049FF77009BE57F /* GradientView.swift */; };
 		01BA383B204A052D009BE57F /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA383A204A052D009BE57F /* RoundImageView.swift */; };
 		01BA383D204A05EC009BE57F /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA383C204A05EC009BE57F /* RoundedShadowView.swift */; };
@@ -44,6 +47,9 @@
 		011AAD362049ED3C0034A31B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011AAD392049ED3C0034A31B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011AAD3B2049ED3C0034A31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01893F9A205B598E004411F4 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		01893F9E205B6847004411F4 /* PickupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupVC.swift; sourceTree = "<group>"; };
+		01893FA0205B692F004411F4 /* RoundMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundMapView.swift; sourceTree = "<group>"; };
 		01BA38382049FF77009BE57F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		01BA383A204A052D009BE57F /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		01BA383C204A05EC009BE57F /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				01020493204A17D300B49F6E /* CenterVCDelegate.swift */,
+				01893F9A205B598E004411F4 /* Alertable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 				0102048E204A13D500B49F6E /* LeftSidePanelVC.swift */,
 				01020490204A145700B49F6E /* ContainerVC.swift */,
 				01FE1EDE204E540F00FBDB08 /* LoginVC.swift */,
+				01893F9E205B6847004411F4 /* PickupVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 				01FE1EE0204E550700FBDB08 /* RoundedTextField.swift */,
 				01FE1EEB2050B17A00FBDB08 /* DriverAnnotation.swift */,
 				01FE1EFB205386E700FBDB08 /* PassengerAnnotation.swift */,
+				01893FA0205B692F004411F4 /* RoundMapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,8 +349,11 @@
 				01020491204A145700B49F6E /* ContainerVC.swift in Sources */,
 				01FE1EDD204E4BA700FBDB08 /* UIViewExt.swift in Sources */,
 				01FE1EE8204F54FA00FBDB08 /* UpdateService.swift in Sources */,
+				01893FA1205B692F004411F4 /* RoundMapView.swift in Sources */,
+				01893F9F205B6847004411F4 /* PickupVC.swift in Sources */,
 				011AAD322049ED3C0034A31B /* HomeVC.swift in Sources */,
 				01BA383B204A052D009BE57F /* RoundImageView.swift in Sources */,
+				01893F9B205B598E004411F4 /* Alertable.swift in Sources */,
 				01FE1EFE2053975C00FBDB08 /* UIViewControllerExt.swift in Sources */,
 				01FE1EEA204F5A3600FBDB08 /* UIImageViewExt.swift in Sources */,
 				01BA383D204A05EC009BE57F /* RoundedShadowView.swift in Sources */,
