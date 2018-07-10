@@ -17,7 +17,7 @@ class RoundMapView: MKMapView {
     func setupView() {
         self.layer.cornerRadius = self.frame.width / 2
         self.layer.borderColor = UIColor.white.cgColor
-        self.layer.borderColor = 10.0
+        //self.layer.borderColor = 10.0
     }
 
 }

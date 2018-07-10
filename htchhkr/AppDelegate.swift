@@ -9,7 +9,58 @@
 import UIKit
 import Firebase
 
+struct Matrix {
+    let rows: Int, columns: Int
+    var grid: [Double]
+    init(rows: Int, columns: Int) {
+        self.rows = rows
+        self.columns = columns
+        grid = Array(repeating: 0.0, count: rows * columns)
+    }
+    
+    func indexIsValid(row: Int, column: Int) -> Bool {
+        return row >= 0 && row < rows && column >= 0 && column < columns
+    }
+    
+    subscript(row: Int, column: Int) -> Double {
+        get {
+            assert(indexIsValid(row: row, column: column), "Index out of range")
+            return grid[(row * columns + column)]
+        }
+        
+        set {
+            assert(indexIsValid(row: row, column: column), "Index out of range")
+            grid[(row * columns + column)] = newValue
+        }
+    }
+}
 
+class Fahrenheit {
+    var temperature: Int = 1
+   
+    
+    init(temp: Int) {
+        temperature = temp
+    }
+}
+class Vehicle {
+    var currentSpeed: Int
+    var description: String {
+        return "traveling at \(currentSpeed) miles per hour"
+    }
+    init() {
+        currentSpeed = 0
+    }
+    func makeNoise() {
+        
+    }
+}
+
+class Train : Vehicle {
+    override func makeNoise() {
+        super.makeNoise()
+    }
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -27,9 +78,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = containerVC
         window?.makeKeyAndVisible()
         
+        let fa:Fahrenheit = Fahrenheit(temp: 1)
+        print(fa.temperature)
+        let x = try! someThrowingFunction()
+        print(x)
         return true
     }
-
+    func someThrowingFunction() throws -> Int {
+        return 1
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

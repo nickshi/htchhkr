@@ -185,7 +185,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-photo" translatesAutoresizingMaskIntoConstraints="NO" id="mHh-pF-tTS" customClass="RoundImageView" customModule="htchhkr" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ninja" translatesAutoresizingMaskIntoConstraints="NO" id="mHh-pF-tTS" customClass="RoundImageView" customModule="htchhkr" customModuleProvider="target">
                                         <rect key="frame" x="323" y="0.0" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="CFr-68-YFP"/>
@@ -330,7 +330,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-photo" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-z1-K16" customClass="RoundImageView" customModule="htchhkr" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ninja" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-z1-K16" customClass="RoundImageView" customModule="htchhkr" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Rat-tn-q8Y"/>
@@ -646,7 +646,7 @@
         <image name="cancelBtn" width="32" height="31"/>
         <image name="centerMapBtn" width="62" height="62"/>
         <image name="menuSliderBtn" width="30" height="24"/>
+        <image name="ninja" width="512" height="512"/>
         <image name="pexels-photo-24821" width="2992" height="2000"/>
-        <image name="sample-photo" width="320" height="320"/>
     </resources>
 </document>
